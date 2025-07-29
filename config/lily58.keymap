@@ -10,6 +10,89 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
+
+    combos {
+        compatible = "zmk,combos";
+
+        Capsword {
+            bindings = <&caps_word>;
+            key-positions = <31 34>;
+        };
+    };
+
+    behaviors {
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <250>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        mt_tap: mt_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <199>;
+        };
+
+        mt_hold_while_undecided: mt_hold_while_undecided {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_HOLD_WHILE_UNDECIDED";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-while-undecided;
+            hold-trigger-on-release;
+        };
+
+        lt_bal: lt_bal {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_BAL";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <200>;
+        };
+
+        oneshot: oneshot {
+            compatible = "zmk,behavior-sticky-key";
+            label = "os";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <1000>;
+            quick-release;
+            ignore-modifiers;
+        };
+
+        layer_oneshot: lo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "lo";
+            bindings = <&mo>, <&oneshot>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <200>;
+            hold-while-undecided;
+        };
+
+        scl: shift_caps_layer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_CAPS_LAYER";
+            #binding-cells = <0>;
+            bindings = <&layer_oneshot 1 LEFT_SHIFT>, <&caps_word>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
