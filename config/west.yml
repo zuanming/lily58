@@ -7,5 +7,18 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: zmk-oled-adapter
+      remote: zuanming
+      revision: main
+    - name: zmk-nice-oled
+      remote: zuanming
+      revision: main
+    - name: zmk-dongle
+      remote: zuanming
+      revision: main
+    - name: zmk-dongle-display
+      remote: zuanming
+      revision: main  
+  self:
   self:
     path: config
