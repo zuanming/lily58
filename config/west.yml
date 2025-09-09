@@ -21,5 +21,8 @@ manifest:
     - name: zmk-dongle-display
       remote: zuanming
       revision: main  
+    - name: nice-view-battery                
+      remote: zuanming                       
+      revision: main   
   self:
     path: config
