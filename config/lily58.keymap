@@ -110,7 +110,7 @@
                                                         &kp LEFT_GUI        &kp LEFT_CONTROL  &layer_oneshot 2 LEFT_SHIFT  &kp SPACE     &kp RET   &lt 1 BACKSPACE  &kp DELETE        &kp RIGHT_ALT
             >;
 
-            sensor-bindings = < &inc_dec_kp KC_PGUP KC_PGDN &inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp KC_PGUP KC_PGDN &inc_dec_kp KC_VOLUME_UP KC_VOLUME_DOWN>;
         };
 
         nav {
