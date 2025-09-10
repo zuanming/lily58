@@ -1,5 +1,0 @@
-#include "lily58.dtsi"
-
-&right_encoder {
-    status = "okay";
-};
