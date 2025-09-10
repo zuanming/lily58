@@ -12,6 +12,7 @@
         a-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
+        zmk,position = <0>;
     };
   
     right_encoder: encoder_right {
@@ -19,6 +20,7 @@
         a-gpios = <&pro_micro 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
+        zmk,position = <1>;
     };
 
     sensors: sensors {
