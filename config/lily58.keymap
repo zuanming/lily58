@@ -76,10 +76,10 @@
             bindings = <&mo>, <&oneshot>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <80>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
             quick-tap-ms = <200>;
-            hold-while-undecided;
+            hold-trigger-on-release;
         };
 
         scl: shift_caps_layer {
