@@ -20,7 +20,7 @@ manifest:
       revision: main
     - name: zmk-dongle-display
       remote: zuanming
-      revision: main  
+      revision: v0.3
     - name: nice-view-battery                
       remote: zuanming                       
       revision: main   
