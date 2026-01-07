@@ -115,7 +115,7 @@
             hold-trigger-key-positions = <6 18 30 31 32 33 34 35 43 45 46 47 7 8 9 10 11 19 20 21 22 23 44 45 46 47 48 49 54 55 56 57>;
         };
 
-        home_row_mod_right: her {
+        home_row_mod_right: hmr {
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_ROW_MOD_RIGHT";
             bindings = <&kp>, <&kp>;
