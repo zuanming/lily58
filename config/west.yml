@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3
       import: app/west.yml
     - name: zmk-oled-adapter
       remote: zuanming
@@ -15,12 +15,12 @@ manifest:
     - name: zmk-nice-oled
       remote: zuanming
       revision: main
-    - name: zmk-dongle
-      remote: zuanming
-      revision: main
-    - name: zmk-dongle-display
-      remote: zuanming
-      revision: main  
+    # - name: zmk-dongle
+    #   remote: zuanming
+    #   revision: main
+    # - name: zmk-dongle-display
+    #   remote: zuanming
+    #   revision: main  
     - name: nice-view-battery                
       remote: zuanming                       
       revision: main   
