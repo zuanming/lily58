@@ -5,4 +5,4 @@ config SHIELD_LILY58_RIGHT_ENCODER
     def_bool $(shields_list_contains,lily58_right_encoder)
 
 config SHIELD_LILY58_LEFT_ENCODER_MAIN
-    def_bool $(shields_list_contains,lily58_left_encoder)
+    def_bool $(shields_list_contains,lily58_left_encoder_main)
