@@ -125,8 +125,8 @@
             bindings = <
 &none  &none      &none     &none     &none      &none                          &none  &kp LG(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP   &kp RG(RIGHT)  &none
 &none  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &none                          &none  &kp LEFT      &kp DOWN       &kp UP_ARROW  &kp RIGHT      &none
-&none  &none      &none     &none     &none      &none  &none            &none  &none  &kp LG(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP   &kp RG(RIGHT)  &none
-&none  &none      &none     &none     &none      &none                          &none  &none         &none          &none         &none          &none
+&none  &none      &none     &none     &none      &none                          &none  &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END        &none
+&none  &none      &none     &none     &none      &none  &none            &none  &none  &none         &none          &none         &none          &none
                             &none     &none      &none  &kp LS(MINUS)    &none  &none  &none         &none
             >;
 
@@ -137,9 +137,9 @@
             bindings = <
 &none  &none      &none     &none     &none      &none                  &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
 &none  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &none                  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-&none  &none      &none     &none     &none      &none  &none    &none  &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-&none  &none      &none     &none     &none      &none                  &none  &none           &none           &none         &none            &none
-                           &none     &none      &none  &none    &none  &none  &none           &none
+&none  &none      &none     &none     &none      &none                  &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+&none  &none      &none     &none     &none      &none  &none    &none  &none  &none           &none           &none         &none            &none
+                            &none     &none      &none  &none    &none  &none  &none           &none
             >;
 
             label = "Nav2";
@@ -147,11 +147,11 @@
 
         num {
             bindings = <
-&none  &none      &none     &none     &none      &none                      &kp LS(N8)  &kp N7   &kp N8     &kp N9  &kp MINUS      &none
-&none  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &none                      &kp FSLH    &kp N4   &kp N5     &kp N6  &kp LS(EQUAL)  &none
-&none  &none      &none     &none     &none      &none  &none    &none      &kp COMMA   &kp N1   &kp N2     &kp N3  &kp SLASH      &none
-&none  &none      &none     &none     &none      &none                      &email      &pw      &pin       &none   &none          &none
-                            &none     &none      &none  &none    &kp EQUAL  &kp N0      &kp DOT  &kp EQUAL
+&none  &none      &none     &none     &none      &none                      &kp LS(N8)  &kp N7        &kp N8        &kp N9        &kp MINUS      &none
+&none  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &none                      &kp FSLH    &kp N4        &kp N5        &kp N6        &kp LS(EQUAL)  &none
+&none  &none      &none     &none     &none      &none                      &kp COMMA   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH      &none
+&none  &none      &none     &none     &none      &none  &none    &none      &none       &pw           &pin          &none         &none          &none
+                            &none     &none      &none  &none    &kp EQUAL  &kp N0      &kp DOT       &none
             >;
 
             label = "Num";
@@ -159,11 +159,11 @@
 
         sym {
             bindings = <
-&none  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp GRAVE                          &none  &none      &none     &none     &none      &none
-&none  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp BSLH    &none                              &none  &kp RSHFT  &kp RGUI  &kp RALT  &kp RCTRL  &none
-&none  &kp LS(N9)  &kp RS(N0)  &none       &none       &none      &none            &none  &none  &none      &none     &none     &none      &none
-&none  &none       &none       &none       &none       &none                              &none  &none      &none     &none     &none      &none
-                               &none       &none       &none      &kp LS(MINUS)    &none  &none  &none      &none
+&none  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)        &kp LS(N4)         &kp GRAVE                          &none  &none      &none     &none     &none      &none
+&none  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)        &kp BSLH           &none                              &none  &kp RSHFT  &kp RGUI  &kp RALT  &kp RCTRL  &none
+&none  &kp LS(N9)  &kp RS(N0)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none                              &none  &none      &none     &none     &none      &none
+&none  &none       &none       &none             &none              &none      &none            &none  &none  &none      &none     &none     &none      &none
+                               &none             &none              &none      &kp LS(MINUS)    &none  &none  &none      &none
             >;
 
             label = "Sym";
@@ -173,8 +173,8 @@
             bindings = <
 &none  &none      &none     &none     &none      &none                  &none  &kp C_MUTE  &kp C_VOL_DN      &kp C_VOL_UP  &none  &none
 &none  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &none                  &none  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT    &none  &none
-&none  &none      &none     &none     &none      &none  &none    &none  &none  &none       &none             &none         &none  &none
 &none  &none      &none     &none     &none      &none                  &none  &none       &none             &none         &none  &none
+&none  &none      &none     &none     &none      &none  &none    &none  &none  &none       &none             &none         &none  &none
                             &none     &none      &none  &none    &none  &none  &none       &none
             >;
 
@@ -183,11 +183,11 @@
 
         layer_6 {
             bindings = <
-&trans  &trans  &trans    &trans    &trans     &trans                    &trans  &trans     &trans    &trans    &trans     &trans
-&trans  &kp A   &kp LALT  &kp LGUI  &kp LSHFT  &trans                    &trans  &kp RSHFT  &kp RGUI  &kp RALT  &kp RCTRL  &trans
-&trans  &kp Z   &kp X     &kp C     &kp V      &trans  &trans    &trans  &trans  &trans     &trans    &trans    &trans     &trans
-&trans  &trans  &trans    &trans    &trans     &trans                    &trans  &trans     &trans    &trans    &trans     &trans
-                          &trans    &trans     &trans  &trans    &trans  &trans  &trans     &trans
+&none  &none  &none     &none     &none      &none                  &none  &none      &none     &none     &none      &none
+&none  &kp A  &kp LALT  &kp LGUI  &kp LSHFT  &none                  &none  &kp RSHFT  &kp RGUI  &kp RALT  &kp RCTRL  &none
+&none  &kp Z  &kp X     &kp C     &kp V      &none                  &none  &none      &none     &none     &none      &none
+&none  &none  &none     &none     &none      &none  &none    &none  &none  &none      &none     &none     &none      &none
+                        &none     &none      &none  &none    &none  &none  &none      &none
             >;
         };
     };
