@@ -105,40 +105,25 @@
     keymap {
         compatible = "zmk,keymap";
 
-        base {
+        Base {
             display-name = "Base";
             bindings = <
 &kp LCTRL       &kp LALT                       &kp LGUI                       &none                              &none                            &none                                                       &none                   &none                         &none                                &none                            &none                            &none
 &kp GRAVE       &kp Q                          &kp W                          &kp F                              &kp P                            &kp B                                                       &kp J                   &kp L                         &kp U                                &kp Y                            &kp APOS                         &none
 &caps_word      &home_row_mod_left LEFT_GUI A  &home_row_mod_left LEFT_ALT R  &home_row_mod_left LEFT_CONTROL S  &home_row_mod_left LEFT_SHIFT T  &kp G                                                       &kp M                   &home_row_mod_right RSHIFT N  &home_row_mod_right RIGHT_CONTROL E  &home_row_mod_right RIGHT_ALT I  &home_row_mod_right RIGHT_GUI O  &none
-&kp LEFT_SHIFT  &kp Z                          &kp X                          &kp C                              &kp D                            &kp V             &none                 &kp C_MUTE          &kp K                   &kp H                         &kp COMMA                            &kp DOT                          &kp FSLH                         &none
-                                                                              &none                              &ltmiryoku 4 ESCAPE              &ltmiryoku 4 TAB  &ltmiryoku 2 SPACE    &ltmiryoku 6 ENTER  &ltmiryoku 5 BACKSPACE  &kp DELETE                    &none
+&kp LEFT_SHIFT  &kp Z                          &kp X                          &kp C                              &kp D                            &kp V             &mo 9                 &kp C_MUTE          &kp K                   &kp H                         &kp COMMA                            &kp DOT                          &kp FSLH                         &none
+                                                                              &none                              &ltmiryoku 3 ESCAPE              &ltmiryoku 3 TAB  &ltmiryoku 1 SPACE    &ltmiryoku 5 ENTER  &ltmiryoku 4 BACKSPACE  &kp DELETE                    &none
             >;
 
             sensor-bindings = <
               &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
               &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN
             >;
+
+            label = "Base";
         };
 
-        Base1 {
-            display-name = "Base";
-            bindings = <
-&kp LCTRL       &kp LALT  &kp LGUI  &none  &none                &none                                                       &none                   &none       &none      &none    &none     &none
-&kp GRAVE       &kp Q     &kp W     &kp F  &kp P                &kp B                                                       &kp J                   &kp L       &kp U      &kp Y    &kp APOS  &none
-&caps_word      &kp A     &kp R     &kp S  &kp T                &kp G                                                       &kp M                   &kp N       &kp E      &kp I    &kp O     &none
-&kp LEFT_SHIFT  &kp Z     &kp X     &kp C  &kp D                &kp V             &none                 &kp C_MUTE          &kp K                   &kp H       &kp COMMA  &kp DOT  &kp FSLH  &none
-                                    &none  &ltmiryoku 4 ESCAPE  &ltmiryoku 4 TAB  &ltmiryoku 2 SPACE    &ltmiryoku 6 ENTER  &ltmiryoku 5 BACKSPACE  &kp DELETE  &none
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
-                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-
-            label = "Base1";
-        };
-
-        nav {
+        Nav {
             bindings = <
 &none  &none      &none     &none     &none      &none                          &none  &none         &none          &none         &none          &none
 &none  &none      &none     &none     &none      &none                          &none  &kp LG(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP   &kp RG(RIGHT)  &none
@@ -150,7 +135,7 @@
             label = "Nav";
         };
 
-        nav2 {
+        Mouse {
             bindings = <
 &none  &none      &none     &none     &none      &none                  &none  &none           &none           &none         &none            &none
 &none  &none      &none     &none     &none      &none                  &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
@@ -159,10 +144,10 @@
                             &none     &none      &none  &none    &none  &none  &none           &none
             >;
 
-            label = "Nav2";
+            label = "Mouse";
         };
 
-        num {
+        Numpad {
             bindings = <
 &none  &none     &none     &none      &none      &none                      &none       &pw           &pin          &none         &none          &none
 &none  &none     &none     &none      &none      &none                      &kp LS(N8)  &kp N7        &kp N8        &kp N9        &kp MINUS      &none
@@ -171,10 +156,10 @@
                            &none      &none      &none  &none    &kp EQUAL  &kp N0      &kp DOT       &none
             >;
 
-            label = "Num";
+            label = "Numpad";
         };
 
-        sym {
+        Symbols {
             bindings = <
 &none  &none       &none       &none             &none              &none                              &none  &none      &none      &none     &none     &none
 &none  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)        &kp LS(N4)         &kp GRAVE                          &none  &none      &none      &none     &none     &none
@@ -183,10 +168,10 @@
                                &none             &none              &none      &kp LS(MINUS)    &none  &none  &none      &none
             >;
 
-            label = "Sym";
+            label = "Symbols";
         };
 
-        func {
+        Function {
             bindings = <
 &none  &none     &none     &none      &none      &none                  &none  &none       &none             &none         &none  &none
 &none  &none     &none     &none      &none      &none                  &none  &kp C_MUTE  &kp C_VOL_DN      &kp C_VOL_UP  &none  &none
@@ -198,27 +183,46 @@
             label = "Function";
         };
 
-        layer_7 {
+        L_Base {
+            display-name = "Base";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&kp LCTRL       &kp LALT  &kp LGUI  &none  &none                &none                                                       &none                   &none       &none      &none    &none     &none
+&kp GRAVE       &kp Q     &kp W     &kp F  &kp P                &kp B                                                       &kp J                   &kp L       &kp U      &kp Y    &kp APOS  &none
+&caps_word      &kp A     &kp R     &kp S  &kp T                &kp G                                                       &kp M                   &kp N       &kp E      &kp I    &kp O     &none
+&kp LEFT_SHIFT  &kp Z     &kp X     &kp C  &kp D                &kp V             &none                 &kp C_MUTE          &kp K                   &kp H       &kp COMMA  &kp DOT  &kp FSLH  &none
+                                    &none  &ltmiryoku 3 ESCAPE  &ltmiryoku 3 TAB  &ltmiryoku 1 SPACE    &ltmiryoku 5 ENTER  &ltmiryoku 4 BACKSPACE  &kp DELETE  &none
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+
+            label = "L_Base";
+        };
+
+        L_Nav {
+            label = "L_Nav";
+            bindings = <
+&none  &none      &none     &none     &none      &none                          &none  &none         &none          &none         &none          &none
+&none  &none      &none     &none     &none      &none                          &none  &kp LG(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP   &kp RG(RIGHT)  &none
+&none  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &none                          &none  &kp LEFT      &kp DOWN       &kp UP_ARROW  &kp RIGHT      &none
+&none  &none      &none     &none     &none      &none  &none            &none  &none  &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END        &none
+                            &none     &none      &none  &kp LS(MINUS)    &none  &none  &none         &none
             >;
         };
 
-        layer_8 {
+        L_Numpad {
+            label = "L_Numpad";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&none  &none     &none     &none      &none      &none                      &none       &pw           &pin          &none         &none          &none
+&none  &none     &none     &none      &none      &none                      &kp LS(N8)  &kp N7        &kp N8        &kp N9        &kp MINUS      &none
+&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none                      &kp FSLH    &kp N4        &kp N5        &kp N6        &kp LS(EQUAL)  &none
+&none  &none     &none     &none      &none      &none  &none    &none      &kp COMMA   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH      &none
+                           &none      &none      &none  &none    &kp EQUAL  &kp N0      &kp DOT       &none
             >;
         };
 
-        layer_9 {
+        Mode {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -226,6 +230,20 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
+
+            label = "Mode";
+        };
+
+        L_Mirror {
+            bindings = <
+&trans    &trans    &trans   &trans     &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &kp APOS  &kp Y    &kp U      &kp L   &kp J                     &trans  &trans  &trans  &trans  &trans  &trans
+&kp SEMI  &kp O     &kp I    &kp E      &kp N   &kp M                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &kp FSLH  &kp DOT  &kp COMMA  &kp H   &kp K   &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                             &trans     &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            label = "L_Mirror";
         };
     };
 };
