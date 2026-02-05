@@ -4,25 +4,29 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: zuanming
       url-base: https://github.com/zuanming
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
-    - name: zmk-oled-adapter
-      remote: zuanming
-      revision: main
-    - name: zmk-nice-oled
-      remote: zuanming
-      revision: main
-    - name: zmk-dongle
-      remote: zuanming
-      revision: main
-    - name: zmk-dongle-display
-      remote: zuanming
-      revision: v0.3
     - name: nice-view-battery                
       remote: zuanming                       
-      revision: main   
+      revision: main        
+    # - name: zmk-oled-adapter
+    #   remote: zuanming
+    #   revision: main
+    # - name: zmk-nice-oled
+    #   remote: zuanming
+    #   revision: main
+    - name: zmk-dongle-display
+      remote: englmaxi
+      revision: v0.3
+    - name: zmk-config
+      remote: zuanming
+      revision: main
   self:
     path: config
