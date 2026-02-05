@@ -16,9 +16,9 @@ manifest:
     - name: nice-view-battery                
       remote: zuanming                       
       revision: main        
-    # - name: zmk-oled-adapter
-    #   remote: zuanming
-    #   revision: main
+    - name: zmk-oled-adapter
+      remote: zuanming
+      revision: main
     # - name: zmk-nice-oled
     #   remote: zuanming
     #   revision: main
