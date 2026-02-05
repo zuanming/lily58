@@ -108,10 +108,10 @@
         base {
             display-name = "Base";
             bindings = <
+&kp LCTRL       &kp LALT                       &kp LGUI                       &none                              &none                            &none&none                   &none                         &none                                &none                            &none                            &none
 &kp GRAVE       &kp Q                          &kp W                          &kp F                              &kp P                            &kp B                                                       &kp J                   &kp L                         &kp U                                &kp Y                            &kp APOS                         &none
 &caps_word      &home_row_mod_left LEFT_GUI A  &home_row_mod_left LEFT_ALT R  &home_row_mod_left LEFT_CONTROL S  &home_row_mod_left LEFT_SHIFT T  &kp G                                                       &kp M                   &home_row_mod_right RSHIFT N  &home_row_mod_right RIGHT_CONTROL E  &home_row_mod_right RIGHT_ALT I  &home_row_mod_right RIGHT_GUI O  &none
-&kp LEFT_SHIFT  &kp Z                          &kp X                          &kp C                              &kp D                            &kp V                                                       &kp K                   &kp H                         &kp COMMA                            &kp DOT                          &kp FSLH                         &none
-&kp LCTRL       &kp LALT                       &kp LGUI                       &none                              &none                            &none             &none                 &kp C_MUTE          &none                   &none                         &none                                &none                            &none                            &none
+&kp LEFT_SHIFT  &kp Z                          &kp X                          &kp C                              &kp D                            &kp V             &none                 &kp C_MUTE          &kp K                   &kp H                         &kp COMMA                            &kp DOT                          &kp FSLH                         &none
                                                                               &none                              &ltmiryoku 4 ESCAPE              &ltmiryoku 4 TAB  &ltmiryoku 2 SPACE    &ltmiryoku 6 ENTER  &ltmiryoku 5 BACKSPACE  &kp DELETE                    &none
             >;
 
@@ -124,10 +124,10 @@
         Base1 {
             display-name = "Base";
             bindings = <
+&kp LCTRL       &kp LALT  &kp LGUI  &none  &none                &none&none                   &none       &none      &none    &none     &none
 &kp GRAVE       &kp Q     &kp W     &kp F  &kp P                &kp B                                                       &kp J                   &kp L       &kp U      &kp Y    &kp APOS  &none
 &caps_word      &kp A     &kp R     &kp S  &kp T                &kp G                                                       &kp M                   &kp N       &kp E      &kp I    &kp O     &none
-&kp LEFT_SHIFT  &kp Z     &kp X     &kp C  &kp D                &kp V                                                       &kp K                   &kp H       &kp COMMA  &kp DOT  &kp FSLH  &none
-&kp LCTRL       &kp LALT  &kp LGUI  &none  &none                &none             &none                 &kp C_MUTE          &none                   &none       &none      &none    &none     &none
+&kp LEFT_SHIFT  &kp Z     &kp X     &kp C  &kp D                &kp V             &none                 &kp C_MUTE          &kp K                   &kp H       &kp COMMA  &kp DOT  &kp FSLH  &none
                                     &none  &ltmiryoku 4 ESCAPE  &ltmiryoku 4 TAB  &ltmiryoku 2 SPACE    &ltmiryoku 6 ENTER  &ltmiryoku 5 BACKSPACE  &kp DELETE  &none
             >;
 
@@ -140,10 +140,10 @@
 
         nav {
             bindings = <
+&none  &none      &none     &none     &none      &none    &none  &none         &none          &none         &none          &none
 &none  &none      &none     &none     &none      &none                          &none  &kp LG(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP   &kp RG(RIGHT)  &none
 &none  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &none                          &none  &kp LEFT      &kp DOWN       &kp UP_ARROW  &kp RIGHT      &none
-&none  &none      &none     &none     &none      &none                          &none  &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END        &none
-&none  &none      &none     &none     &none      &none  &none            &none  &none  &none         &none          &none         &none          &none
+&none  &none      &none     &none     &none      &none &none            &none &none  &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END        &none
                             &none     &none      &none  &kp LS(MINUS)    &none  &none  &none         &none
             >;
 
@@ -152,10 +152,10 @@
 
         nav2 {
             bindings = <
+&none  &none      &none     &none     &none      &none    &none  &none           &none           &none         &none            &none
 &none  &none      &none     &none     &none      &none                  &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
 &none  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &none                  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-&none  &none      &none     &none     &none      &none                  &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-&none  &none      &none     &none     &none      &none  &none    &none  &none  &none           &none           &none         &none            &none
+&none  &none      &none     &none     &none      &none    &none    &none        &none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
                             &none     &none      &none  &none    &none  &none  &none           &none
             >;
 
@@ -164,10 +164,10 @@
 
         num {
             bindings = <
+&none  &none     &none     &none      &none      &none&none       &pw           &pin          &none         &none          &none
 &none  &none     &none     &none      &none      &none                      &kp LS(N8)  &kp N7        &kp N8        &kp N9        &kp MINUS      &none
 &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none                      &kp FSLH    &kp N4        &kp N5        &kp N6        &kp LS(EQUAL)  &none
-&none  &none     &none     &none      &none      &none                      &kp COMMA   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH      &none
-&none  &none     &none     &none      &none      &none  &none    &none      &none       &pw           &pin          &none         &none          &none
+&none  &none     &none     &none      &none      &none  &none    &none      &kp COMMA   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH      &none
                            &none      &none      &none  &none    &kp EQUAL  &kp N0      &kp DOT       &none
             >;
 
@@ -176,10 +176,10 @@
 
         sym {
             bindings = <
+&none  &none       &none       &none             &none              &none  &none  &none      &none      &none     &none     &none
 &none  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)        &kp LS(N4)         &kp GRAVE                          &none  &none      &none      &none     &none     &none
 &none  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)        &kp BSLH           &none                              &none  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &none
-&none  &kp LS(N9)  &kp RS(N0)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none                              &none  &none      &none      &none     &none     &none
-&none  &none       &none       &none             &none              &none      &none            &none  &none  &none      &none      &none     &none     &none
+&none  &kp LS(N9)  &kp RS(N0)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none     &none            &none &none  &none      &none      &none     &none     &none
                                &none             &none              &none      &kp LS(MINUS)    &none  &none  &none      &none
             >;
 
@@ -188,10 +188,10 @@
 
         func {
             bindings = <
+&none  &none     &none     &none      &none      &none &none  &none       &none             &none         &none  &none
 &none  &none     &none     &none      &none      &none                  &none  &kp C_MUTE  &kp C_VOL_DN      &kp C_VOL_UP  &none  &none
 &none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none                  &none  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT    &none  &none
-&none  &none     &none     &none      &none      &none                  &none  &none       &none             &none         &none  &none
-&none  &none     &none     &none      &none      &none  &none    &none  &none  &none       &none             &none         &none  &none
+&none  &none     &none     &none      &none      &none &none    &none  &none  &none       &none             &none         &none  &none
                            &none      &none      &none  &none    &none  &none  &none       &none
             >;
 
