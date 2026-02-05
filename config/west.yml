@@ -15,12 +15,12 @@ manifest:
     - name: zmk-nice-oled
       remote: zuanming
       revision: main
-    # - name: zmk-dongle
-    #   remote: zuanming
-    #   revision: main
-    # - name: zmk-dongle-display
-    #   remote: zuanming
-    #   revision: v0.3
+    - name: zmk-dongle
+      remote: zuanming
+      revision: main
+    - name: zmk-dongle-display
+      remote: zuanming
+      revision: v0.3
     - name: nice-view-battery                
       remote: zuanming                       
       revision: main   
